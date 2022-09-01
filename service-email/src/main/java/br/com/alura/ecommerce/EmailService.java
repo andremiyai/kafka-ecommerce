@@ -3,20 +3,20 @@ package br.com.alura.ecommerce;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 
 import java.util.HashMap;
+import java.util.concurrent.ExecutionException;
 
 public class EmailService {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
         var emailService = new EmailService();
         try(var service = new KafkaService(EmailService.class.getSimpleName()
                 ,"ECOMMERCE_SEND_EMAIL"
                 , emailService::parse
-                , Email.class
                 ,new HashMap<>())) {
             service.run();
         }
     }
 
-    private void parse(ConsumerRecord<String,Email> record) {
+    private void parse(ConsumerRecord<String,Message<Email>> record) {
         System.out.println("----------------------------------------------");
         System.out.println("Enviando email");
         System.out.println(record.key());
