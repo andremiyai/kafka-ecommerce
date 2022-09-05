@@ -10,8 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>br.com.alura</groupId>
-    <artifactId>service-users</artifactId>
-
+    <artifactId>service-email-new-order</artifactId>
     <dependencies>
         <dependency>
             <groupId>br.com.alura</groupId>
@@ -19,13 +18,6 @@
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>br.com.alura</groupId>
-            <artifactId>common-database</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-
     </dependencies>
 
     <properties>

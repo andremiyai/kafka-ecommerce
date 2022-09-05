@@ -1,5 +1,3 @@
-package br.com.alura.ecommerce;
-
 import java.math.BigDecimal;
 
 public class Order {
@@ -18,10 +16,6 @@ public class Order {
 
     public String getEmail() {
         return email;
-    }
-
-    public String getOrderId() {
-        return orderId;
     }
 
     @Override
